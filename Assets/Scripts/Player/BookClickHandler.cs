@@ -6,9 +6,6 @@ public class BookClickHandler : MonoBehaviour
     [Header("Tag to detect")]
     public string targetTag = "Book";
 
-    [Header("Player Reference")]
-    public Transform player;
-
     [Header("Max distance to collect book")]
     public float maxCollectDistance = 3f;
 
@@ -34,7 +31,7 @@ public class BookClickHandler : MonoBehaviour
             {
                 if (hit.collider.CompareTag(targetTag))
                 {
-                    float distance = Vector3.Distance(player.position, hit.collider.transform.position);
+                    float distance = Vector3.Distance(Collector.playerObj.transform.position, hit.collider.transform.position);
                     if (distance <= maxCollectDistance)
                     {
                         Destroy(hit.collider.gameObject);
@@ -62,7 +59,7 @@ public class BookClickHandler : MonoBehaviour
         {
             if (hit.collider.CompareTag(targetTag))
             {
-                float distance = Vector3.Distance(player.position, hit.collider.transform.position);
+                float distance = Vector3.Distance(Collector.playerObj.transform.position, hit.collider.transform.position);
                 if (distance <= maxCollectDistance)
                 {
                     if (!isLookingAtBook)

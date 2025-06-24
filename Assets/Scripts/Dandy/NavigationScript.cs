@@ -206,6 +206,7 @@ public class BaldiAI : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            Debug.Log("hi");
             isJumpscareTriggered = true;
 
             agent.isStopped = true;
