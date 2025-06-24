@@ -8,6 +8,7 @@ public class BaldiAI : MonoBehaviour
     public AudioClip clapClip;
     public AudioClip jumpscareClip;
     public Camera playerCamera;
+    public Animator myAnim;
 
     public float dashDistance = 3f;
     public float dashSpeed = 20f;
@@ -21,7 +22,7 @@ public class BaldiAI : MonoBehaviour
     private bool isJumpscareTriggered = false;
     private int totalBooks;
     private bool aiStarted = false;
-
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -197,6 +198,7 @@ public class BaldiAI : MonoBehaviour
         if (clapClip && audioSrc)
         {
             audioSrc.PlayOneShot(clapClip);
+            myAnim.SetBool("isAngry", true);
         }
     }
 

@@ -49134,6 +49134,7 @@ GameObject:
   - component: {fileID: 1373325953}
   - component: {fileID: 1373325955}
   - component: {fileID: 1373325954}
+  - component: {fileID: 1373325956}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -49210,7 +49211,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f40697aa0a4a495458766b4d61383356, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f94c17169f11f344a71ab3fbd1c15cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -49221,6 +49222,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1373325956
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373325952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7cd0500f7f46b2241ac1dda811b60183, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1374500505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8745468475873509195, guid: a21c4498057ef96469ddcef00b4a1740, type: 3}
@@ -52796,6 +52818,7 @@ MonoBehaviour:
   clapClip: {fileID: 8300000, guid: 17d521a333bd0e24cb56d4efb1c46a1e, type: 3}
   jumpscareClip: {fileID: 8300000, guid: 3a9b8f645e6afbf4eb845cd6adfac003, type: 3}
   playerCamera: {fileID: 1816895832}
+  myAnim: {fileID: 1373325956}
   dashDistance: 3
   dashSpeed: 20
   minWaitTime: 0.5
