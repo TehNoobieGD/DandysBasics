@@ -13,5 +13,6 @@ public class GameManager : MonoBehaviour
         Collector.playerObj = playerObj;
         Collector.baldiAiScript = baldiAiScript;
         Collector.settings = settings;
+        settings.InitializeSettings();
     }
 }

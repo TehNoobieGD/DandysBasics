@@ -28,6 +28,11 @@ public class PauseMenu : MonoBehaviour
             if (IsVideoPlaying())
                 return;
 
+            if(Collector.settings.gameObject.activeSelf)
+            {
+                return;
+            }
+
             if (!isPaused)
             {
                 PauseGame();

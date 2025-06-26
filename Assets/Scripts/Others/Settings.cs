@@ -17,7 +17,12 @@ public class Settings : MonoBehaviour
     [HideInInspector] public float mouseSensitivity;
 
 
-    private void Start()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && gameObject.activeSelf)
+            gameObject.SetActive(false);
+    }
+    public void InitializeSettings()
     {
         SaveLoad.LoadSettings();
 
@@ -34,6 +39,7 @@ public class Settings : MonoBehaviour
         UpdateCaptions();
         mouseSlider.value = mouseSensitivity;
         volumeSlider.value = AudioListener.volume;
+        gameObject.SetActive(false);
     }
     private void OnDisable()
     {
