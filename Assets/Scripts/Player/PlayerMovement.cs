@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         if (Cursor.lockState == CursorLockMode.Locked)
         {
             float mouseXRaw = Input.GetAxis("Mouse X");
-            float mouseX = (Input.GetKey(KeyCode.Space) ? -mouseXRaw : mouseXRaw) * mouseSensitivity * Time.deltaTime;
+            float mouseX = (Input.GetKey(KeyCode.Space) ? -mouseXRaw : mouseXRaw) * mouseSensitivity * Collector.settings.mouseSensitivity * Time.deltaTime;
 
             rotationY += mouseX;
             transform.rotation = Quaternion.Euler(0f, rotationY, 0f);

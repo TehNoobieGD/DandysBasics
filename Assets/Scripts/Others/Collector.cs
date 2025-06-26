@@ -5,5 +5,6 @@ using UnityEngine;
 public static class Collector
 {
     public static GameObject playerObj;
-    public static BaldiAI baldiAiScript; 
+    public static BaldiAI baldiAiScript;
+    public static Settings settings;
 }
