@@ -11,6 +11,8 @@ public class Settings : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI fullscreenText;
     [SerializeField] TextMeshProUGUI captionsText;
+    [SerializeField] TextMeshProUGUI volumePercentText;
+    [SerializeField] TextMeshProUGUI mousePercentText;
 
     [HideInInspector] public bool fullscreen;
     [HideInInspector] public bool captions;
@@ -39,6 +41,8 @@ public class Settings : MonoBehaviour
         UpdateCaptions();
         mouseSlider.value = mouseSensitivity;
         volumeSlider.value = AudioListener.volume;
+        volumePercentText.text = Mathf.RoundToInt(volumeSlider.value * 100) + "%";
+        mousePercentText.text = Mathf.RoundToInt(mouseSlider.value * 100) + "%";
         gameObject.SetActive(false);
     }
     private void OnDisable()
@@ -77,10 +81,12 @@ public class Settings : MonoBehaviour
     public void Slider_Volume()
     {
         AudioListener.volume = volumeSlider.value;
+        volumePercentText.text = Mathf.RoundToInt(volumeSlider.value * 100) + "%";
     }
     public void Slider_MouseSensitivity()
     {
         mouseSensitivity = mouseSlider.value;
+        mousePercentText.text = Mathf.RoundToInt(mouseSlider.value * 100) + "%";
     }
     void ChangeText(TextMeshProUGUI meshPro, string info)
     {
